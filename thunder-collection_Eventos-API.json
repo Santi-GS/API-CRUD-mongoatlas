@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Eventos-API",
+    "collectionId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+    "dateExported": "2024-10-21T21:57:37.311Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1f927077-58ac-4734-adb1-33c1bb683b2b",
+            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "containerId": "",
+            "name": "create evento",
+            "url": "http://localhost:3000/eventos/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-21T21:56:51.777Z",
+            "modified": "2024-10-21T21:56:51.777Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"titulo\": \"Conferencia de Node.js\",\n    \"descripcion\": \"Un evento sobre las últimas novedades de Node.js\",\n    \"ubicacion\": \"Madrid, España\",\n    \"fecha\": \"2024-11-20\",\n    \"hora\": \"10:00 AM\",\n    \"organizador\": {\n        \"nombre\": \"Juan Pérez\",\n        \"correo\": \"juan.perez@example.com\",\n        \"telefono\": \"+34 600 123 456\"\n    },\n    \"tipo\": \"Tecnología\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "142b3b23-f1d8-4240-a079-0254b19c4adf",
+            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "containerId": "",
+            "name": "update evento",
+            "url": "http://localhost:3000/eventos/6716b557c08e0dc94158eb22",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-10-21T21:56:51.777Z",
+            "modified": "2024-10-21T21:56:51.777Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"titulo\": \"Conferencia en la luna\",\r\n    \"descripcion\": \"Conferencia sobre los problemas terrestres\",\r\n    \"ubicacion\": \"La Rioja, España\",\r\n    \"fecha\": \"2024-11-20\",\r\n    \"hora\": \"10:00 AM\",\r\n    \"organizador\": {\r\n        \"nombre\": \"Juan Pérez\",\r\n        \"correo\": \"juan.perez@example.com\",\r\n        \"telefono\": \"+34 600 123 456\"\r\n    },\r\n    \"tipo\": \"Religión\"\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "85a9fdc3-a125-4f7e-a14e-3c6f9d958876",
+            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "containerId": "",
+            "name": "delete evento",
+            "url": "http://localhost:3000/eventos/6716a6637d19baf56fc25c5f",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-10-21T21:56:51.777Z",
+            "modified": "2024-10-21T21:56:51.777Z",
+            "headers": []
+        },
+        {
+            "_id": "fea4d9a8-329e-4079-a1fb-d7485042080d",
+            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "containerId": "",
+            "name": "get all eventos",
+            "url": "http://localhost:3000/eventos/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-10-21T21:56:51.777Z",
+            "modified": "2024-10-21T21:56:51.777Z",
+            "headers": []
+        },
+        {
+            "_id": "752a9805-e1f0-4819-bc66-eb27415f775c",
+            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "containerId": "",
+            "name": "get one evento",
+            "url": "http://localhost:3000/eventos/6716b557c08e0dc94158eb22",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-21T21:56:51.777Z",
+            "modified": "2024-10-21T21:56:51.777Z",
+            "headers": []
+        }
+    ],
+    "ref": "9hmOCCaOiDEch2fJdkiEdVWul9KtAOdVf9_isSikqqr22bHv9PmcPiApXC70DfMm9J9RZi-nmzEJkxuNUzg1rw"
+}

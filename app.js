@@ -2,11 +2,12 @@ const express = require('express');
 const app = express();
 const dbconnect = require('./config/db');
 const eventosRoutes = require('./routes/eventos');
-const eventEmisor = require('./routes/eventos');
+
 
 app.use(express.json());
 app.use(eventosRoutes);
-app.use(eventEmisor);
+
+
 
 dbconnect().then(() => {
     app.listen(3000, () => {
