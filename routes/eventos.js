@@ -66,4 +66,29 @@ routerEvento.delete('/eventos/:id', async (req, res) => {
     }
 });
 
+// Obtener eventos segun el nombre de organizador
+routerEvento.get('/eventos/negocio/busqueda', async (req, res) => {
+    const { nombre } = req.query;  // Obtenemos el nombre del organizador desde los query params
+
+    try {
+        const query = {};
+        if (nombre) {
+            // Usamos una expresión regular para buscar coincidencias flexibles e insensibles a mayúsculas/minúsculas
+            query['organizador.nombre'] = { $regex: nombre, $options: 'i' };
+        }
+        
+        const eventos = await ModelEvento.find(query);  // Ejecutamos la búsqueda en la base de datos
+        
+        if (!eventos.length) {
+            return res.status(404).send({ mensaje: 'No se encontraron eventos con el nombre del organizador proporcionado' });
+        }
+
+        res.status(200).send(eventos);  // Enviamos los eventos encontrados
+    } catch (error) {
+        res.status(500).send({ mensaje: 'Error al buscar eventos', error });
+    }
+});
+
+
+
 module.exports = routerEvento;

@@ -1,81 +1,100 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Eventos-API",
-    "collectionId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
-    "dateExported": "2024-10-21T21:57:37.311Z",
+    "collectionId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
+    "dateExported": "2024-10-22T00:10:41.973Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "1f927077-58ac-4734-adb1-33c1bb683b2b",
-            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "_id": "f96141c1-329c-49da-8e93-d894f5d26b0a",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
             "containerId": "",
             "name": "create evento",
             "url": "http://localhost:3000/eventos/",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-10-21T21:56:51.777Z",
-            "modified": "2024-10-21T21:56:51.777Z",
+            "created": "2024-10-21T22:02:43.009Z",
+            "modified": "2024-10-21T23:43:47.540Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"titulo\": \"Conferencia de Node.js\",\n    \"descripcion\": \"Un evento sobre las últimas novedades de Node.js\",\n    \"ubicacion\": \"Madrid, España\",\n    \"fecha\": \"2024-11-20\",\n    \"hora\": \"10:00 AM\",\n    \"organizador\": {\n        \"nombre\": \"Juan Pérez\",\n        \"correo\": \"juan.perez@example.com\",\n        \"telefono\": \"+34 600 123 456\"\n    },\n    \"tipo\": \"Tecnología\"\n}\n",
+                "raw": "{\n    \"titulo\": \"Tour por el centroRiojano\",\n    \"descripcion\": \"Que buena api\",\n    \"ubicacion\": \"La Rioja, Argentina\",\n    \"fecha\": \"2024-11-25\",\n    \"hora\": \"10:00 AM\",\n    \"organizador\": {\n        \"nombre\": \"Facundo Rivera\",\n        \"correo\": \"Facundo@example.com\",\n        \"telefono\": \"+34 600 123 456\"\n    },\n    \"tipo\": \"Caminata\"\n}\n",
                 "form": []
             }
         },
         {
-            "_id": "142b3b23-f1d8-4240-a079-0254b19c4adf",
-            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "_id": "862b7b0e-96dc-4225-b9ee-c72f93af00a5",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
             "containerId": "",
             "name": "update evento",
-            "url": "http://localhost:3000/eventos/6716b557c08e0dc94158eb22",
+            "url": "http://localhost:3000/eventos/6716e66d89cb07218c96707a",
             "method": "PUT",
             "sortNum": 20000,
-            "created": "2024-10-21T21:56:51.777Z",
-            "modified": "2024-10-21T21:56:51.777Z",
+            "created": "2024-10-21T22:02:43.010Z",
+            "modified": "2024-10-21T23:45:23.750Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"titulo\": \"Conferencia en la luna\",\r\n    \"descripcion\": \"Conferencia sobre los problemas terrestres\",\r\n    \"ubicacion\": \"La Rioja, España\",\r\n    \"fecha\": \"2024-11-20\",\r\n    \"hora\": \"10:00 AM\",\r\n    \"organizador\": {\r\n        \"nombre\": \"Juan Pérez\",\r\n        \"correo\": \"juan.perez@example.com\",\r\n        \"telefono\": \"+34 600 123 456\"\r\n    },\r\n    \"tipo\": \"Religión\"\r\n}\r\n",
+                "raw": "{\n    \"titulo\": \"Concierto en La Plata\",\n    \"descripcion\": \"nada\",\n    \"ubicacion\": \"La Plata, Buenos Aires\",\n    \"fecha\": \"2024-12-20\",\n    \"hora\": \"12:00 pM\",\n    \"organizador\": {\n        \"nombre\": \"Carlos Villagran\",\n        \"correo\": \"Carlos@example.com\",\n        \"telefono\": \"+34 600 123 456\"\n    },\n    \"tipo\": \"Musica\"\n}\n",
                 "form": []
             }
         },
         {
-            "_id": "85a9fdc3-a125-4f7e-a14e-3c6f9d958876",
-            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "_id": "89895a19-898a-4455-93ff-a1e97060d402",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
             "containerId": "",
             "name": "delete evento",
-            "url": "http://localhost:3000/eventos/6716a6637d19baf56fc25c5f",
+            "url": "http://localhost:3000/eventos/6716b557c08e0dc94158eb22",
             "method": "DELETE",
             "sortNum": 30000,
-            "created": "2024-10-21T21:56:51.777Z",
-            "modified": "2024-10-21T21:56:51.777Z",
+            "created": "2024-10-21T22:02:43.012Z",
+            "modified": "2024-10-21T22:04:47.120Z",
             "headers": []
         },
         {
-            "_id": "fea4d9a8-329e-4079-a1fb-d7485042080d",
-            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "_id": "9dc10f07-327b-4530-8532-7f350c2a6132",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
             "containerId": "",
             "name": "get all eventos",
             "url": "http://localhost:3000/eventos/",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2024-10-21T21:56:51.777Z",
-            "modified": "2024-10-21T21:56:51.777Z",
+            "created": "2024-10-21T22:02:43.013Z",
+            "modified": "2024-10-21T22:02:43.013Z",
             "headers": []
         },
         {
-            "_id": "752a9805-e1f0-4819-bc66-eb27415f775c",
-            "colId": "7f1770c4-c76c-4fdc-b8c5-5991c4466555",
+            "_id": "f9b2bbd6-29c7-4b1e-84ef-d0cb0d0f32a4",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
             "containerId": "",
             "name": "get one evento",
-            "url": "http://localhost:3000/eventos/6716b557c08e0dc94158eb22",
+            "url": "http://localhost:3000/eventos/6716e66d89cb07218c96707a",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2024-10-21T21:56:51.777Z",
-            "modified": "2024-10-21T21:56:51.777Z",
+            "created": "2024-10-21T22:02:43.014Z",
+            "modified": "2024-10-22T00:07:29.676Z",
             "headers": []
+        },
+        {
+            "_id": "c37e2d3c-3c4f-4fd0-a481-56851df1da5b",
+            "colId": "eefc7590-2b87-4a9e-b2c7-d6e682c8ae8f",
+            "containerId": "",
+            "name": "Find nombre organizador",
+            "url": "http://localhost:3000/eventos/negocio/busqueda?nombre=Facundo",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-10-21T23:39:03.130Z",
+            "modified": "2024-10-22T00:10:21.225Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "nombre",
+                    "value": "Facundo",
+                    "isPath": false
+                }
+            ]
         }
     ],
-    "ref": "9hmOCCaOiDEch2fJdkiEdVWul9KtAOdVf9_isSikqqr22bHv9PmcPiApXC70DfMm9J9RZi-nmzEJkxuNUzg1rw"
+    "ref": "m1cdQDcy59OMsbSYjOAIA4eE6kphLCAWa2K4QyYRDVl3SyQfkjUAMnUhUPeJ0CyqCD4shqPgP9nzzulhoQ1GcA"
 }
