@@ -66,40 +66,51 @@ routerEvento.delete('/eventos/:id', async (req, res) => {
     }
 });
 
-// Obtener eventos segun el nombre de organizador y titulo del evento
+// Obtener eventos segun el nombre de organizador
 routerEvento.get('/eventos/negocio/busqueda', async (req, res) => {
-    const { nombre, titulo } = req.query; // Obtenemos nombre del organizador y título del evento desde los query params
+    const { nombre } = req.query;  // Obtenemos el nombre del organizador desde los query params
 
     try {
         const query = {};
-        
-        // Filtro por nombre del organizador
         if (nombre) {
+            // Usamos una expresión regular para buscar coincidencias flexibles e insensibles a mayúsculas/minúsculas
             query['organizador.nombre'] = { $regex: nombre, $options: 'i' };
         }
         
-        // Filtro por título del evento
-        if (titulo) {
-            query['titulo'] = { $regex: titulo, $options: 'i' };
-        }
+        const eventos = await ModelEvento.find(query);  // Ejecutamos la búsqueda en la base de datos
         
-        // Ejecutamos la búsqueda en la base de datos
-        const eventos = await ModelEvento.find(query);
-
-        // Si no se encuentran eventos
         if (!eventos.length) {
-            return res.status(404).send({
-                mensaje: 'No se encontraron eventos con los criterios de búsqueda proporcionados'
-            });
+            return res.status(404).send({ mensaje: 'No se encontraron eventos con el nombre del organizador proporcionado' });
         }
 
-        // Enviamos los eventos encontrados
-        res.status(200).send(eventos);
+        res.status(200).send(eventos);  // Enviamos los eventos encontrados
     } catch (error) {
         res.status(500).send({ mensaje: 'Error al buscar eventos', error });
     }
 });
 
+//Obtener eventos segun el titulo del evento
+routerEvento.get('/eventos/negocio/busqueda', async (req, res) => {
+    const { titulo } = req.query;  // Obtenemos el título del evento desde los query params
+
+    try {
+        const query = {};
+        if (titulo) {
+            // Usamos una expresión regular para buscar coincidencias flexibles e insensibles a mayúsculas/minúsculas
+            query['titulo'] = { $regex: titulo, $options: 'i' };
+        }
+        
+        const eventos = await ModelEvento.find(query);  // Ejecutamos la búsqueda en la base de datos
+        
+        if (!eventos.length) {
+            return res.status(404).send({ mensaje: 'No se encontraron eventos con el título proporcionado' });
+        }
+
+        res.status(200).send(eventos);  // Enviamos los eventos encontrados
+    } catch (error) {
+        res.status(500).send({ mensaje: 'Error al buscar eventos', error });
+    }
+});
 
 
 module.exports = routerEvento;
